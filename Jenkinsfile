@@ -17,7 +17,7 @@ pipeline
                 sh '''
                    make ARCH=arm CROSS_COMPILE=/usr/bin/arm-linux-gnueabihf- zoetis_defconfig
                    make ARCH=arm CROSS_COMPILE=/usr/bin/arm-linux-gnueabihf- zImage modules dtbs
-                   make ARCH=arm CROSS_COMPILE=/usr/bin/arm-linux-gnueabihf- tar-pkg
+                   make ARCH=arm CROSS_COMPILE=/usr/bin/arm-linux-gnueabihf- tarxz-pkg
                    '''
             }
         }
@@ -26,7 +26,7 @@ pipeline
     {
       success
       {
-        archiveArtifacts artifacts: "*Zoetis-arm.tar"
+        archiveArtifacts artifacts: "*Zoetis-arm.tar.xz"
       }
     }
 }
