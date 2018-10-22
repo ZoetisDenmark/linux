@@ -31,6 +31,10 @@ config LOGO_ZOETIS_CLUT224
 	bool "Zoetis 224-color Linux logo"
 	default y
 
+config LOGO_HESKA_CLUT224
+	bool "Heska 224-color Linux logo"
+	default n
+
 config LOGO_BLACKFIN_VGA16
 	bool "16-colour Blackfin Processor Linux logo"
 	depends on BLACKFIN

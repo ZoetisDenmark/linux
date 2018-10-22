@@ -57,7 +57,7 @@ const struct linux_logo * __ref fb_find_logo(int depth)
 		logo = &logo_superh_mono;
 #endif
 	}
-	
+
 	if (depth >= 4) {
 #ifdef CONFIG_LOGO_LINUX_VGA16
 		/* Generic Linux logo */
@@ -72,7 +72,7 @@ const struct linux_logo * __ref fb_find_logo(int depth)
 		logo = &logo_superh_vga16;
 #endif
 	}
-	
+
 	if (depth >= 8) {
 #ifdef CONFIG_LOGO_LINUX_CLUT224
 		/* Generic Linux logo */
@@ -81,6 +81,10 @@ const struct linux_logo * __ref fb_find_logo(int depth)
 #ifdef CONFIG_LOGO_ZOETIS_CLUT224
 		/* Zoetis Linux logo */
 		logo = &logo_zoetis_clut224;
+#endif
+#ifdef CONFIG_LOGO_HESKA_CLUT224
+		/* Zoetis Linux logo */
+		logo = &logo_heska_clut224;
 #endif
 #ifdef CONFIG_LOGO_BLACKFIN_CLUT224
 		/* Blackfin Linux logo */
